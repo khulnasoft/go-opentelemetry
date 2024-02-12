@@ -44,10 +44,10 @@ func ConfigureOpenTelemetry(conf Config) (func(), error) {
 	collectorUrl := getEnv("OTEL_EXPORTER_OTLP_ENDPOINT", conf.CollectorUrl)
 	if collectorUrl == "" {
 		if conf.Protocol == "grpc" {
-			collectorUrl = "otel-grpc.kengine.io"
+			collectorUrl = "otel-grpc.kengine.khulnasoft.com"
 		}
 		if conf.Protocol == "http" {
-			collectorUrl = "https://otel.kengine.io"
+			collectorUrl = "https://otel.kengine.khulnasoft.com"
 		}
 	}
 
